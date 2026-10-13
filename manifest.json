@@ -1,0 +1,33 @@
+{
+  "name": "hanime1-downloader",
+  "author": "six-six-six-six",
+  "title": "Hanime1 视频下载器",
+  "description": "解析 hanime1.me 观看页面，提取 1080p 视频流与简体中文字幕文件",
+  "version": "1.0.0",
+  "homepage": "https://github.com/six-six-six-six/gopeed-extension-hanime1",
+  "repository": {
+    "url": "https://github.com/six-six-six-six/gopeed-extension-hanime1"
+  },
+  "settings": [
+    {
+      "name": "cookie",
+      "title": "Hanime1 Cookie",
+      "description": "从浏览器开发者工具中复制 hanime1.me 的完整 Cookie 值（用于绕过 Cloudflare 保护）",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "userAgent",
+      "title": "User-Agent",
+      "description": "请求使用的 User-Agent，默认使用 Chrome 指纹",
+      "type": "string",
+      "default": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+    }
+  ],
+  "scripts": [
+    {
+      "match": "*://hanime1.me/watch*",
+      "entry": "index.js"
+    }
+  ]
+}
